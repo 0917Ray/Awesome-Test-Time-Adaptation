@@ -28,16 +28,11 @@ Paper links, official implementations, and project pages in one place.
 
 - [Scope and terminology](#-scope-and-terminology)
 - [Start here](#-start-here)
-- [Browse by method](#-browse-by-method)
-- [Papers by year](#-papers-by-year)
-  - [2026](#2026)
-  - [2025](#2025)
-  - [2024](#2024)
-  - [2023](#2023)
-  - [2022](#2022)
-  - [2021](#2021)
-  - [2020](#2020)
-- [Surveys and benchmarks](#-surveys-and-benchmarks)
+- [Browse options](#-browse-options)
+  - [By year](#by-year)
+  - [By topic](TOPICS.md)
+- [Papers by year](#papers-by-year)
+- [Surveys and benchmarks](#surveys-and-benchmarks)
 - [Contributing](#-contributing)
 - [Citation](#-citation)
 
@@ -76,6 +71,42 @@ included when they directly shaped modern TTA.
 ![Project](https://img.shields.io/badge/Project-Website-0969da?logo=googlechrome&logoColor=white)
 `Method family` ⭐ Landmark or especially useful starting point
 
+## 🔎 Browse options
+
+There are two complementary ways to navigate this collection. **Year is the
+canonical organization** for new additions; a paper can appear in more than
+one topic because research contributions often span several mechanisms.
+
+<a id="by-year"></a>
+
+### 🗓️ By year
+
+| Year | Icon | What to expect |
+| --- | --- | --- |
+| [🛰️ 2026](#year-2026) | New directions | Representation steering and emerging TTA ideas |
+| [🚀 2025](#year-2025) | Expansion | Self-training, wild-stream, and prompt-based methods |
+| [🧠 2024](#year-2024) | New objectives | Forward-only, energy, cache, and adapter methods |
+| [🔄 2023](#year-2023) | Stabilization | Reliable and continual test-time adaptation |
+| [⚙️ 2022](#year-2022) | Online systems | Memory, augmentation, and parameter-free adaptation |
+| [🧭 2021](#year-2021) | Core baselines | Entropy, prototypes, and self-supervised training |
+| [🌱 2020](#year-2020) | Foundations | The modern TTT setup and normalization adaptation |
+
+### 🧩 By topic
+
+Use the dedicated [topic index](TOPICS.md) to browse by adaptation mechanism,
+deployment setting, or evaluation focus:
+
+| Icon | Topic | Examples |
+| --- | --- | --- |
+| 🧪 | Self-supervision and consistency | TTT, TTT++, MEMO, SPA |
+| 📉 | Entropy, uncertainty, and selection | Tent, EATA, SAR, DeYO, ReCAP |
+| 🧮 | Statistics, prototypes, and parameter-free | BN Adapt, T3A, LAME, TDA |
+| 🔄 | Continual and online streams | CoTTA, NOTE, RMT, EcoTTA, RoTTA, ViDA |
+| 👁️ | Vision-language and prompt adaptation | TDA, DynaPrompt |
+| ⚡ | Efficient and forward-only adaptation | FOA, FreeTTA, EcoTTA |
+| 🧬 | Representation steering and lightweight components | SPeaR, ViDA |
+| 📊 | Surveys, evaluation, and benchmarks | TTAB and surveys |
+
 ## 🧩 Browse by method
 
 | Method family | Representative papers |
@@ -88,24 +119,36 @@ included when they directly shaped modern TTA.
 | Forward-only or black-box search | FOA |
 | Evaluation and benchmarking | TTAB, Online TTA under time constraints |
 
+<a id="papers-by-year"></a>
+
 ## 📚 Papers by year
 
-### 2026
+The year is the primary index. Each entry has a stable anchor so it can also
+be referenced from [TOPICS.md](TOPICS.md).
 
+<a id="year-2026"></a>
+
+### 🛰️ 2026
+
+<a id="spear"></a>
 - **SPeaR** - *Test-Time Adaptation with Steering Primitives for Realigning
   Representations*. arXiv 2026. `Representation steering`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.24111)
   - Keeps the pretrained network frozen and adapts lightweight steering
     modules inserted between stages.
 
-### 2025
+<a id="year-2025"></a>
 
+### 🚀 2025
+
+<a id="spa"></a>
 - **SPA** - *Self-Bootstrapping for Versatile Test-Time Adaptation*. ICML
   2025. `Self-training`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.08010)
   - Builds an adaptable supervisory signal from the model itself across
     multiple deployment settings.
 
+<a id="recap"></a>
 - **ReCAP** - *Beyond Entropy: Region Confidence Proxy for Wild Test-Time
   Adaptation*. ICML 2025. `Wild TTA`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.20704)
@@ -113,20 +156,25 @@ included when they directly shaped modern TTA.
   - Uses regional confidence to select reliable adaptation signals in mixed
     and open-world test streams.
 
+<a id="dynaprompt"></a>
 - **DynaPrompt** - *Dynamic Test-Time Prompt Tuning*. ICLR 2025. `TTPT`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.16404)
   [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/zzzx1224/DynaPrompt)
   - Maintains dynamic prompts for online adaptation of vision-language
     models.
 
+<a id="freetta"></a>
 - **FreeTTA** - *Free on the Fly: Enhancing Flexibility in Test-Time
   Adaptation with Online EM*. CVPR 2025. `Training-free`
   [![Paper](https://img.shields.io/badge/Paper-CVPR-005a9c)](https://openaccess.thecvf.com/content/CVPR2025/html/Dai_Free_on_the_Fly_Enhancing_Flexibility_in_Test-Time_Adaptation_with_CVPR_2025_paper.html)
   - Uses online expectation-maximization to adapt predictions without
     gradient-based parameter updates.
 
-### 2024
+<a id="year-2024"></a>
 
+### 🧠 2024
+
+<a id="deyo"></a>
 - ⭐ **DeYO** - *Entropy Is Not Enough for Test-Time Adaptation: From the
   Perspective of Disentangled Factors*. ICLR 2024. `Sample selection`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=9w3iw8wDuE)
@@ -134,12 +182,14 @@ included when they directly shaped modern TTA.
   - Filters unreliable samples using prediction certainty and input-level
     information before entropy-based updates.
 
+<a id="foa"></a>
 - **FOA** - *Test-Time Model Adaptation with Only Forward Passes*. ICML 2024.
   `Forward-only`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.01650)
   - Replaces backpropagation with derivative-free optimization over a small
     set of adaptation parameters.
 
+<a id="tda"></a>
 - **TDA** - *Efficient Test-Time Adaptation of Vision-Language Models*. CVPR
   2024. `Cache-based`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2403.18293)
@@ -147,12 +197,14 @@ included when they directly shaped modern TTA.
   - Adapts CLIP predictions through positive and negative caches without
     gradient updates.
 
+<a id="tea"></a>
 - **TEA** - *TEA: Test-Time Energy Adaptation*. CVPR 2024. `Energy-based`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.14402)
   [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/yuanyige/tea)
   - Uses an energy-based objective to align the model with the test
     distribution.
 
+<a id="vida"></a>
 - **ViDA** - *Homeostatic Visual Domain Adapter for Continual Test Time
   Adaptation*. ICLR 2024. `CTTA`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=sJ88Wg5Bp5)
@@ -160,6 +212,7 @@ included when they directly shaped modern TTA.
   - Uses complementary adapters to balance plasticity and retention in a
     changing test stream.
 
+<a id="universal-tta"></a>
 - **Universal TTA** - *Universal Test-Time Adaptation through Weight
   Ensembling, Diversity Weighting, and Prior Correction*. WACV 2024.
   `Universal TTA`
@@ -167,8 +220,11 @@ included when they directly shaped modern TTA.
   - Combines model ensembling and prior correction for diverse test-time
     shifts.
 
-### 2023
+<a id="year-2023"></a>
 
+### 🔄 2023
+
+<a id="sar"></a>
 - ⭐ **SAR** - *Towards Stable Test-Time Adaptation in Dynamic Wild World*.
   ICLR 2023. `Sharpness-aware`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=g2YraF75Tj)
@@ -176,6 +232,7 @@ included when they directly shaped modern TTA.
   - Couples reliable entropy selection with sharpness-aware updates to resist
     model collapse.
 
+<a id="rotta"></a>
 - ⭐ **RoTTA** - *Robust Test-Time Adaptation in Dynamic Scenarios*. CVPR
   2023. `CTTA`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.13899)
@@ -183,6 +240,7 @@ included when they directly shaped modern TTA.
   - Uses a category-balanced memory and robust teacher updates for correlated
     streams.
 
+<a id="ecotta"></a>
 - **EcoTTA** - *Memory-Efficient Continual Test-Time Adaptation via
   Self-Distilled Regularization*. CVPR 2023. `Efficient CTTA`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.01904)
@@ -190,6 +248,7 @@ included when they directly shaped modern TTA.
   - Adapts compact meta networks while regularizing intermediate features to
     reduce memory and forgetting.
 
+<a id="rmt"></a>
 - **RMT** - *Robust Mean Teacher for Continual and Gradual Test-Time
   Adaptation*. CVPR 2023. `CTTA`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2211.13081)
@@ -197,6 +256,7 @@ included when they directly shaped modern TTA.
   - Stabilizes a teacher-student system with source prototypes and symmetric
     cross-entropy.
 
+<a id="ttab"></a>
 - **TTAB** - *On Pitfalls of Test-Time Adaptation*. ICML 2023.
   `Benchmarking`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.03536)
@@ -204,14 +264,18 @@ included when they directly shaped modern TTA.
   - Studies protocol choices and failure modes that can reverse conclusions
     about adaptation methods.
 
-### 2022
+<a id="year-2022"></a>
 
+### ⚙️ 2022
+
+<a id="cotta"></a>
 - ⭐ **CoTTA** - *Continual Test-Time Domain Adaptation*. CVPR 2022. `CTTA`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2203.13591)
   [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/qinenergy/cotta)
   - Combines weight-averaged teachers, augmentation, and stochastic model
     restoration for long test streams.
 
+<a id="eata"></a>
 - ⭐ **EATA** - *Efficient Test-Time Model Adaptation without Forgetting*.
   ICML 2022. `Entropy minimization`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2204.02610)
@@ -219,6 +283,7 @@ included when they directly shaped modern TTA.
   - Selects informative samples and constrains important parameters to improve
     efficiency and limit forgetting.
 
+<a id="memo"></a>
 - ⭐ **MEMO** - *Test Time Robustness via Adaptation and Augmentation*.
   NeurIPS 2022. `Instance-wise`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=vn74m_tWu8O)
@@ -226,6 +291,7 @@ included when they directly shaped modern TTA.
   - Minimizes prediction entropy across augmentations of a single test
     example.
 
+<a id="note"></a>
 - **NOTE** - *Robust Continual Test-Time Adaptation Against Temporal
   Correlation*. NeurIPS 2022. `CTTA`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=E9HNxrCFZPV)
@@ -233,6 +299,7 @@ included when they directly shaped modern TTA.
   - Addresses biased normalization statistics caused by temporally correlated
     test samples.
 
+<a id="lame"></a>
 - **LAME** - *Parameter-Free Online Test-Time Adaptation*. CVPR 2022.
   `Parameter-free`
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2201.05718)
@@ -240,8 +307,11 @@ included when they directly shaped modern TTA.
   - Refines output probabilities through graph-based label assignment without
     updating model parameters.
 
-### 2021
+<a id="year-2021"></a>
 
+### 🧭 2021
+
+<a id="tent"></a>
 - ⭐ **Tent** - *Tent: Fully Test-Time Adaptation by Entropy Minimization*.
   ICLR 2021. `Entropy minimization`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=uXl3bZLkr3c)
@@ -249,6 +319,7 @@ included when they directly shaped modern TTA.
   - Updates normalization statistics and affine parameters by minimizing test
     prediction entropy.
 
+<a id="t3a"></a>
 - **T3A** - *Test-Time Classifier Adjustment Module for Model-Agnostic Domain
   Generalization*. NeurIPS 2021. `Prototypes`
   [![Paper](https://img.shields.io/badge/Paper-NeurIPS-652c8f)](https://proceedings.neurips.cc/paper/2021/hash/1415fe9fea0fa1e45dddcff5682239a0-Abstract.html)
@@ -256,6 +327,7 @@ included when they directly shaped modern TTA.
   - Adjusts the classifier using pseudo-prototypes collected from unlabeled
     test samples.
 
+<a id="ttt-plus-plus"></a>
 - **TTT++** - *When Does Self-Supervised Test-Time Training Fail or Thrive?*
   NeurIPS 2021. `Self-supervision`
   [![OpenReview](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=86NHK__yFDl)
@@ -263,8 +335,11 @@ included when they directly shaped modern TTA.
   - Improves feature alignment and training design for more reliable
     self-supervised adaptation.
 
-### 2020
+<a id="year-2020"></a>
 
+### 🌱 2020
+
+<a id="ttt"></a>
 - ⭐ **TTT** - *Test-Time Training with Self-Supervision for Generalization
   under Distribution Shifts*. ICML 2020. `Self-supervision`
   [![Paper](https://img.shields.io/badge/Paper-PMLR-0085ca)](https://proceedings.mlr.press/v119/sun20b.html)
@@ -273,12 +348,15 @@ included when they directly shaped modern TTA.
   - Establishes the modern TTT setup by optimizing a self-supervised auxiliary
     task for each test input.
 
+<a id="bn-adapt"></a>
 - **BN Adapt** - *Improving Robustness against Common Corruptions by Covariate
   Shift Adaptation*. NeurIPS 2020. `Normalization statistics`
   [![Paper](https://img.shields.io/badge/Paper-NeurIPS-652c8f)](https://proceedings.neurips.cc/paper/2020/hash/85690f81aadc1749175c187784afc9ee-Abstract.html)
   [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/bethgelab/robustness)
   - Re-estimates normalization statistics from target batches as a simple
     adaptation baseline.
+
+<a id="surveys-and-benchmarks"></a>
 
 ## 🔭 Surveys and benchmarks
 

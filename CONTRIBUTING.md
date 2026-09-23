@@ -17,8 +17,9 @@ Please check that the proposed work:
 
 ## Entry format
 
-Add papers in reverse chronological order within the correct year. Use this
-template and keep the explanation to one sentence:
+Add papers in reverse chronological order within the correct year in
+`README.md`. Then add a link under one or more matching sections in
+`TOPICS.md`. Use this template and keep the explanation to one sentence:
 
 ```markdown
 - **METHOD** - *Full Paper Title*. Venue Year. `Method family`
@@ -37,6 +38,7 @@ Please do not mark a paper solely because you authored it.
 - [ ] I used the existing entry format and method tags.
 - [ ] I added a concise, neutral description rather than promotional text.
 - [ ] I kept the pull request focused on related changes.
+- [ ] I added the paper to at least one relevant topic in `TOPICS.md`.
 
 By contributing, you agree that your contribution is made available under the
 repository's [CC0 1.0 Universal](LICENSE) dedication.
