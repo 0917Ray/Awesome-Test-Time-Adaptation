@@ -1,0 +1,52 @@
+name: Paper suggestion
+description: Suggest a TTA or TTT paper for the collection
+title: "[Paper] "
+labels:
+  - paper suggestion
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper URL
+      description: Prefer arXiv, OpenReview, or the publisher's paper page.
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Official code URL
+      description: Leave blank if no official implementation is available.
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+    validations:
+      required: true
+  - type: dropdown
+    id: family
+    attributes:
+      label: Method family
+      options:
+        - Self-supervision and consistency
+        - Entropy and uncertainty
+        - Statistics, prototypes, or parameter-free
+        - Continual or online adaptation
+        - Vision-language adaptation
+        - Forward-only or black-box search
+        - Evaluation or benchmark
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Why should it be included?
+      description: Summarize the test-time adaptation idea in one or two sentences.
+    validations:
+      required: true
